@@ -1,4 +1,4 @@
-# ⚖️ Justice Performance Data Quality and Operational Insights
+# ⚖️  Performance Data Quality and Operational Insights
 
 A beginner-friendly portfolio project that profiles synthetic monthly performance data, checks its quality, and prepares trusted Gold performance and KPI outputs. The data is synthetic and does not represent confidential MoJ or HMPPS information.
 
