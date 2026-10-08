@@ -1,0 +1,5 @@
+establishment_id,establishment_name,region,establishment_type,reporting_month,reporting_period_end,population,certified_normal_accommodation,occupancy_pct,assaults,assaults_per_100,self_harm_incidents,self_harm_per_100,security_incidents,security_incidents_per_100,absconds,education_attendance_pct,purposeful_activity_pct,average_staff,staff_sickness_days,staff_sickness_rate_pct,staff_resignation_rate_pct,data_submission_date,submission_delay_days
+PR001,Northdale,North,Male Closed,2025-04-01,2025-04-30,1000,1154,86.66,2,0.20,3,0.30,1,0.10,0,70.00,75.00,480,370,3.50,6.90,2025-05-05,5
+PR001,Northdale,North,Male Closed,2025-05-01,2025-05-31,1010,1154,87.52,1,0.10,4,0.40,2,0.20,0,71.00,76.00,482,365,3.40,6.80,2025-06-05,5
+PR001,Northdale,North,Male Closed,2025-06-01,2025-06-30,1020,1154,88.39,3,0.29,2,0.20,1,0.10,0,72.00,77.00,484,360,3.30,6.70,2025-07-05,5
+PR001,Northdale,North,Male Closed,2025-07-01,2025-07-31,1030,1154,89.25,2,0.19,3,0.29,0,0.00,0,73.00,78.00,486,355,3.20,6.60,2025-08-05,5

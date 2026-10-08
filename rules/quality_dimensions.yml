@@ -1,0 +1,28 @@
+schema_version: 1
+dimensions:
+  completeness:
+    - REQ-001
+    - REQ-002
+    - REQ-003
+    - REQ-004
+    - REQ-005
+  validity:
+    - DATE-001
+    - DATE-002
+    - NUM-001
+    - NUM-002
+    - NUM-003
+    - RATE-001
+    - RATE-002
+  uniqueness:
+    - DUP-001
+  consistency: []
+  referential_integrity:
+    - REF-001
+    - REF-002
+    - REF-003
+  timeliness:
+    - REQ-005
+    - DATE-003
+review_only_rule_ids:
+  - REVIEW-001

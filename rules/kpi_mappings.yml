@@ -1,0 +1,86 @@
+schema_version: 1
+context_fields:
+  - establishment_id
+  - region
+  - establishment_type
+kpis:
+  - kpi_name: Occupancy %
+    method: ratio
+    availability: CALCULATED
+    numerator_field: population
+    denominator_field: certified_normal_accommodation
+    multiplier: 100
+    output_field: occupancy_pct
+    unit: percent
+    target_comparable: true
+    quality_dimensions: [completeness, validity, referential_integrity]
+    formula: population / certified normal accommodation * 100
+  - kpi_name: Education attendance %
+    method: supplied
+    availability: SUPPLIED_ONLY
+    supplied_field: education_attendance_pct
+    output_field: education_attendance_pct
+    unit: percent
+    target_comparable: false
+    quality_dimensions: [completeness, validity, referential_integrity]
+    reason: Session numerator and denominator are not supplied, so the percentage cannot be independently checked or weighted.
+  - kpi_name: Purposeful activity %
+    method: supplied
+    availability: DEFINITION_UNCLEAR
+    supplied_field: purposeful_activity_pct
+    output_field: purposeful_activity_pct
+    unit: percent (assumed from field name)
+    target_comparable: false
+    quality_dimensions: [completeness, validity, referential_integrity]
+    reason: The target definition does not specify a numerator or denominator.
+  - kpi_name: Assaults per 100
+    method: ratio
+    availability: CALCULATED
+    numerator_field: assaults
+    denominator_field: population
+    multiplier: 100
+    output_field: assaults_per_100
+    unit: incidents per 100 people
+    target_comparable: true
+    quality_dimensions: [completeness, validity, referential_integrity]
+    formula: assaults / population * 100
+  - kpi_name: Self-harm per 100
+    method: ratio
+    availability: CALCULATED
+    numerator_field: self_harm_incidents
+    denominator_field: population
+    multiplier: 100
+    output_field: self_harm_per_100
+    unit: incidents per 100 people
+    target_comparable: true
+    quality_dimensions: [completeness, validity, referential_integrity]
+    formula: self-harm incidents / population * 100
+  - kpi_name: Security incidents per 100
+    method: ratio
+    availability: CALCULATED
+    numerator_field: security_incidents
+    denominator_field: population
+    multiplier: 100
+    output_field: security_incidents_per_100
+    unit: incidents per 100 people
+    target_comparable: true
+    quality_dimensions: [completeness, validity, referential_integrity]
+    formula: security incidents / population * 100
+  - kpi_name: Staff sickness rate %
+    method: supplied
+    availability: SUPPLIED_ONLY
+    supplied_field: staff_sickness_rate_pct
+    output_field: staff_sickness_rate_pct
+    unit: percent
+    target_comparable: false
+    quality_dimensions: [completeness, validity, referential_integrity]
+    reason: Available staff days are not supplied, so the target rate cannot be independently recalculated.
+  - kpi_name: Staff resignation rate %
+    method: supplied
+    availability: SUPPLIED_ONLY
+    supplied_field: staff_resignation_rate_pct
+    output_field: staff_resignation_rate_pct
+    unit: percent
+    target_comparable: false
+    quality_dimensions: [completeness, validity, referential_integrity]
+    reason: Resignation counts are not supplied, so the target rate cannot be independently recalculated.

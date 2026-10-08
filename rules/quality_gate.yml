@@ -1,0 +1,6 @@
+schema_version: 1
+# Demonstration thresholds only; these are not official MoJ/HMPPS standards.
+block_on_any_critical_issue: true
+maximum_high_severity_record_rate_pct: 0.5
+minimum_overall_dq_score_pct: 95.0
+require_reconciliation_pass: true

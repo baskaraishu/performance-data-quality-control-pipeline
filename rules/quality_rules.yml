@@ -1,0 +1,159 @@
+schema_version: 1
+rules:
+  - rule_id: REQ-001
+    columns: [establishment_id]
+    check: not_null
+    parameters: {}
+    severity: Critical
+    action: quarantine
+    description: Establishment ID is required to identify and reference the record.
+
+  - rule_id: REQ-002
+    columns: [reporting_month]
+    check: not_null
+    parameters: {}
+    severity: Critical
+    action: quarantine
+    description: Reporting month is required to identify the monthly record.
+
+  - rule_id: REQ-003
+    columns: [population]
+    check: not_null
+    parameters: {}
+    severity: High
+    action: quarantine
+    description: Population is needed to calculate occupancy and incident rates.
+
+  - rule_id: REQ-004
+    columns: [reporting_period_end]
+    check: not_null
+    parameters: {}
+    severity: High
+    action: quarantine
+    description: Reporting period end is needed to interpret the reporting period.
+
+  - rule_id: REQ-005
+    columns: [data_submission_date]
+    check: not_null
+    parameters: {}
+    severity: Medium
+    action: flag
+    description: Submission date is needed to assess reporting timeliness.
+
+  - rule_id: REF-001
+    columns: [establishment_id]
+    check: reference_exists
+    parameters:
+      reference_file: data/reference/establishments.csv
+      reference_key: establishment_id
+    severity: Critical
+    action: quarantine
+    description: Establishment ID must exist in the synthetic establishment reference.
+
+  - rule_id: DATE-001
+    columns: [reporting_month]
+    check: valid_iso_date
+    parameters:
+      format: "%Y-%m-%d"
+      first_day_of_month: true
+    severity: Critical
+    action: quarantine
+    description: Reporting month must be a valid ISO date on the first day of its month.
+
+  - rule_id: DATE-002
+    columns: [reporting_period_end]
+    check: valid_iso_date
+    parameters:
+      format: "%Y-%m-%d"
+    severity: High
+    action: quarantine
+    description: Reporting period end must be a valid ISO date.
+
+  - rule_id: DATE-003
+    columns: [data_submission_date]
+    check: valid_iso_date
+    parameters:
+      format: "%Y-%m-%d"
+    severity: Medium
+    action: flag
+    description: Submission date must be a valid ISO date for timeliness reporting.
+
+  - rule_id: NUM-001
+    columns: [population, assaults, self_harm_incidents, security_incidents, absconds, staff_sickness_days]
+    check: non_negative_integer
+    parameters: {}
+    severity: High
+    action: flag
+    description: Counts must be whole numbers greater than or equal to zero.
+
+  - rule_id: NUM-002
+    columns: [certified_normal_accommodation]
+    check: greater_than
+    parameters:
+      value: 0
+    severity: High
+    action: flag
+    description: Certified accommodation must be above zero to calculate occupancy.
+
+  - rule_id: NUM-003
+    columns: [average_staff]
+    check: non_negative_integer
+    parameters: {}
+    severity: Medium
+    action: flag
+    description: Average staff count, when supplied, must be a whole number at least zero.
+
+  - rule_id: RATE-001
+    columns: [occupancy_pct, assaults_per_100, self_harm_per_100, security_incidents_per_100]
+    check: non_negative_number
+    parameters: {}
+    severity: High
+    action: flag
+    description: Supplied occupancy and incident rates must not be negative.
+
+  - rule_id: RATE-002
+    columns: [education_attendance_pct, purposeful_activity_pct, staff_sickness_rate_pct, staff_resignation_rate_pct]
+    check: between
+    parameters:
+      min: 0
+      max: 100
+    severity: High
+    action: flag
+    description: Supplied percentage values must be between zero and one hundred when present.
+
+  - rule_id: REVIEW-001
+    columns: [occupancy_pct]
+    check: exceeds
+    parameters:
+      value: 100
+    severity: Medium
+    action: flag
+    description: Occupancy above 100 percent is a review prompt, not an automatic data error.
+
+  - rule_id: REF-002
+    columns: [region]
+    check: reference_column_values
+    parameters:
+      reference_file: data/reference/establishments.csv
+      reference_column: region
+    severity: Medium
+    action: flag
+    description: Region must match a value in the synthetic establishment reference.
+
+  - rule_id: REF-003
+    columns: [establishment_type]
+    check: reference_column_values
+    parameters:
+      reference_file: data/reference/establishments.csv
+      reference_column: establishment_type
+    severity: Medium
+    action: flag
+    description: Establishment type must match a value in the synthetic establishment reference.
+
+  - rule_id: DUP-001
+    columns: [establishment_id, reporting_month]
+    check: unique_combination
+    parameters: {}
+    severity: High
+    action: quarantine
+    description: An establishment-month key should identify one curated monthly record; keep all duplicate candidates for review.

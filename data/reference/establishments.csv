@@ -1,0 +1,31 @@
+establishment_id,establishment_name,region,establishment_type,design_capacity,certified_normal_accommodation
+PR001,Northdale,North,Male Closed,1200,1154
+PR002,Riverside,North,Male Closed,950,888
+PR003,Hillcrest,North,Female Closed,520,504
+PR004,Westmoor,North,Male Category C,780,746
+PR005,Pennine,North,Male Category C,680,617
+PR006,Lakeside,North,Young Offender,430,421
+PR007,Eastgate,North,Male Closed,1100,1057
+PR008,Meadowfield,North,Female Closed,610,587
+PR009,Southport,South,Male Closed,1250,1138
+PR010,Greenfield,South,Male Closed,1020,955
+PR011,Oakridge,South,Female Closed,560,521
+PR012,Stonebridge,South,Male Category C,720,701
+PR013,Brookside,South,Male Category B,880,837
+PR014,Redwood,South,Male Closed,1180,1140
+PR015,Harbour View,South,Female Closed,590,552
+PR016,Ashford,Midlands,Male Closed,1000,918
+PR017,Central Vale,Midlands,Male Category C,760,718
+PR018,Kingswood,Midlands,Male Category B,900,815
+PR019,Elm Park,Midlands,Female Closed,540,522
+PR020,Highfield,Midlands,Male Closed,1150,1093
+PR021,Cedar House,Midlands,Young Offender,410,394
+PR022,Willowbank,Midlands,Male Category C,700,650
+PR023,Fairview,Wales,Male Closed,930,909
+PR024,Mountain View,Wales,Male Category C,640,622
+PR025,Severn House,Wales,Female Closed,500,481
+PR026,Valley Gate,Wales,Male Category B,820,751
+PR027,Coastal View,Wales,Male Closed,1080,1012
+PR028,Glenwood,Scotland,Male Closed,970,876
+PR029,Caledonia,Scotland,Male Category C,690,630
+PR030,Lochside,Scotland,Female Closed,470,449

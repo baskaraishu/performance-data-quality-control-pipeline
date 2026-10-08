@@ -1,0 +1,31 @@
+schema_version: 1
+missing_values: preserve
+duplicate_handling: use_task10_disposition
+integer_columns:
+  - population
+  - certified_normal_accommodation
+  - assaults
+  - self_harm_incidents
+  - security_incidents
+  - absconds
+  - average_staff
+  - staff_sickness_days
+  - submission_delay_days
+decimal_columns:
+  - occupancy_pct
+  - assaults_per_100
+  - self_harm_per_100
+  - security_incidents_per_100
+  - education_attendance_pct
+  - purposeful_activity_pct
+  - staff_sickness_rate_pct
+  - staff_resignation_rate_pct
+date_columns:
+  - reporting_month
+  - reporting_period_end
+  - data_submission_date
+category_mappings:
+  establishment_type:
+    "male closed": "Male Closed"
+    "MALE CLOSED": "Male Closed"
+    "Male-Closed": "Male Closed"

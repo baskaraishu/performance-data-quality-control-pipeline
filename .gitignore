@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.playwright-mcp/
+htmlcov/
+.coverage
+.DS_Store
+
+# Local credentials and private keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Reproducible pipeline run outputs; keep source inputs and references versioned
+data/bronze/
+data/silver/
+data/quarantine/
+data/gold/
+reports/*/
+
+# Byte-identical backups of active raw/reference inputs
+archive/legacy-inputs/

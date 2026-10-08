@@ -1,0 +1,9 @@
+kpi_name,direction,target_value,definition
+Occupancy %,Lower,95.0,Population / Certified accommodation * 100
+Education attendance %,Higher,75.0,Attended sessions / Scheduled sessions * 100
+Purposeful activity %,Higher,75.0,Activity participation rate
+Assaults per 100,Lower,3.5,Assaults / population * 100
+Self-harm per 100,Lower,6.0,Self-harm incidents / population * 100
+Security incidents per 100,Lower,2.0,Security incidents / population * 100
+Staff sickness rate %,Lower,5.0,Sickness days / available staff days * 100
+Staff resignation rate %,Lower,8.0,Resignations / average staff * 100
