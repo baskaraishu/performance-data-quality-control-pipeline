@@ -1,6 +1,11 @@
-# Justice Performance Data Quality and Operational Insights
+# ⚖️ Justice Performance Data Quality and Operational Insights
 
 A beginner-friendly portfolio project that profiles synthetic monthly performance data, checks its quality, and prepares trusted Gold performance and KPI outputs. The data is synthetic and does not represent confidential MoJ or HMPPS information.
+
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-3110/)
+[![POC scope: Pipeline to Gold](https://img.shields.io/badge/POC-Pipeline%20to%20Gold-27856A)](#run-the-end-to-end-pipeline)
+
+[🛠️ Setup](#development-setup-macos) · [🧪 Tests](#run-tests) · [🚀 Run the pipeline](#run-the-end-to-end-pipeline) · [📚 Project docs](#project-documents)
 
 ## Project Structure
 
